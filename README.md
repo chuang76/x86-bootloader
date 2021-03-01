@@ -1,6 +1,6 @@
 # x86-bootloader
 
-An experimental x86 [bootloader](https://en.wikipedia.org/wiki/Booting) (i386) for the learning purpose. The project is implemented in 5 labs and emulated with [QEMU](https://www.qemu.org/) emulator.  
+The project is an experimental x86 [bootloader](https://en.wikipedia.org/wiki/Booting) (i386) for the learning purpose. Bootloader is a program that runs before the operating system. It loads the kernel when a computer is turned on. The project is implemented 5 labs and emulated with [QEMU](https://www.qemu.org/) emulator.  
 
 - [x] Print a string in 16-bit real mode with BIOS routine (int 0x10)
 - [x] Print hex bytes, not just ASCII characters
@@ -16,7 +16,15 @@ An experimental x86 [bootloader](https://en.wikipedia.org/wiki/Booting) (i386) f
 
 ## Usage
 
+Install QEMU emulator in Kali Linux
+
+```
+$ sudo apt-get install qemu-system-x86
+```
+
 Instructions to run Lab05:
+
+![](https://github.com/chuang76/x86-bootloader/blob/main/figure/demo-1.PNG?raw=true)
 
 - Compile the assembly code into binary 
 
@@ -24,7 +32,7 @@ Instructions to run Lab05:
   $ nasm boot.asm -f bin -o boot.bin
   ```
 
-- Compile the files about kernel and link intro binary 
+- Compile the files about kernel and link object files into binary 
 
   ```
   $ nasm kernel_entry.asm -f elf -o kernel_entry.o
@@ -50,3 +58,10 @@ Instructions to run Lab05:
   $ make
   ```
 
+
+
+## Result
+
+We first print a string in 16-bit real mode with BIOS interrupt routine. Then prepare to load kernel from disk and switch to 32-bit protected mode. Finally, we land on 32-bit protected mode and load the kernel. As you can see, we print 'X' successfully which is located in the function of kernel. 
+
+![](https://github.com/chuang76/x86-bootloader/blob/main/figure/demo-2.png?raw=true)
