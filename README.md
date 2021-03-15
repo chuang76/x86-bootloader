@@ -67,6 +67,6 @@ Instructions to run Lab05:
 
 ## Result
 
-We first print a string in 16-bit real mode with BIOS interrupt call. Then prepare to load kernel from disk and switch to 32-bit protected mode. Finally, we land on 32-bit protected mode and load the kernel. As you can see, we execute a function that is located in the kernel. That is, print 'X' with video memory successfully. 
+The program first prints a string in 16-bit real mode with BIOS interrupt call. Then prepare to load the kernel from the disk and switch to 32-bit protected mode. Finally, it lands on 32-bit protected mode and loads the kernel. As you can see, the program executes the function that is located in the kernel. That is, print 'X' with video memory successfully. 
 
 <img src="https://github.com/chuang76/x86-bootloader/blob/main/figure/demo-2.png?raw=true" width="600" height="400">
