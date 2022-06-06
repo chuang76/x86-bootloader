@@ -18,11 +18,11 @@ start:
 
 	jmp $
 
-%include "../Lab03/print.asm"
-%include "../Lab03/disk_load.asm"
-%include "../Lab04/gdt.asm"
-%include "../Lab04/print_pmode.asm"
-%include "../Lab04/switch.asm"
+%include "../print.asm"
+%include "../disk_load.asm"
+%include "../gdt.asm"
+%include "../print_pmode.asm"
+%include "../switch.asm"
 
 [bits 16]
 load_kernel:
