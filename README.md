@@ -2,7 +2,7 @@
 
 The project is an experimental x86 [bootloader](https://en.wikipedia.org/wiki/Booting) (i386) for the learning purpose. Bootloader is a piece of program that runs before the operating system when a computer is turned on. Its primary goal is to ready the system for control by the kernel. The project is emulated with [QEMU](https://www.qemu.org/), which is a powerful machine emulator and virtualizer. 
 
-- [x] Print a string and hex bytes (not just ASCII characters) in 16-bit real mode with BIOS interrupt call (int 0x10)
+- [x] Print a string in 16-bit real mode with BIOS interrupt call (int 0x10)
 - [x] Understand the concepts of stack and function calls
 - [x] Load data from disk with BIOS interrupt call (int 0x13)
 - [x] Implement the global descriptor table (GDT) structure 
