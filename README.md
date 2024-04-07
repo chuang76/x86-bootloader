@@ -4,7 +4,6 @@ The project is an experimental x86 [bootloader](https://en.wikipedia.org/wiki/Bo
 
 - [x] Print a string and hex bytes (not just ASCII characters) in 16-bit real mode with BIOS interrupt call (int 0x10)
 - [x] Understand the concepts of stack and function calls
-- [x] Understand the memory addressing of 8086/80286/80386: segmentation and flat model 
 - [x] Load data from disk with BIOS interrupt call (int 0x13)
 - [x] Implement the global descriptor table (GDT) structure 
 - [x] Switch to 32-bit protected mode: disable interrupt, load GDT, enable PE flag in CR0, flush pipeline
@@ -13,13 +12,13 @@ The project is an experimental x86 [bootloader](https://en.wikipedia.org/wiki/Bo
 
 ## Usage
 
-Install QEMU emulator in Kali Linux
+Install QEMU emulator in Linux
 
 ```
 $ sudo apt-get install qemu-system-x86
 ```
 
-Type the following commands or simply run make command 
+Run the following commands or run make command 
 
 ![](https://github.com/chuang76/x86-bootloader/blob/main/figure/demo-1.PNG?raw=true)
 
@@ -49,7 +48,7 @@ Type the following commands or simply run make command
   $ qemu-system-i386 -fda bootloader
   ```
 
-If you want to debug the code, you can connect to gdb remotely with the port 1234
+If you would like to debug the code, you can connect to GDB remotely with the following command:
 
 ```
 (gdb) target remote localhost:1234
@@ -57,6 +56,6 @@ If you want to debug the code, you can connect to gdb remotely with the port 123
 
 ## Result
 
-The program first prints a string in 16-bit real mode with BIOS interrupt call. Then prepare to load the kernel from the disk and switch to 32-bit protected mode. Finally, it lands on 32-bit protected mode and loads the kernel. As you can see, the program executes the function that is located in the kernel. That is, print 'X' with video memory successfully. 
+The program initially prints a string in 16-bit real mode using a BIOS interrupt call. Subsequently, it prepares to load the kernel from the disk and transitions to 32-bit protected mode. Finally, it successfully enters 32-bit protected mode and proceeds to load the kernel. As evident, the program executes the function within the kernel, resulting in the successful display of 'X' on the video memory.
 
 <img src="https://github.com/chuang76/x86-bootloader/blob/main/figure/demo-2.png?raw=true" width="600" height="400">
